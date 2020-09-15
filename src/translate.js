@@ -55,6 +55,7 @@ const translate = {
     // but are significant in text). See #65.
     // Replicate the same behaviour here.
     msgid = msgid.trim()
+    msgid = msgid.replace(/(data-v-([0-9a-z]*)="" )/gm, '')
 
     let translated = translations[msgid]
 
